@@ -10,7 +10,6 @@ def pages(request):
 
 
 def bus_stations(request):
-    print('page = ', request.GET.get('page'))
     with open(settings.BUS_STATION_CSV, encoding='cp1251') as f:
         reader = csv.DictReader(f)
         stations_list = list(reader)
